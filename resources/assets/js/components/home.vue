@@ -65,9 +65,16 @@
                                 </b-col>
                             </b-row>
                         </b-form-group>
-                        <b-button type="submit" variant="primary" @click="Clicked = true" :disabled="Clicked">Create report</b-button>
+                        <b-button type="submit" variant="primary" @click="Clicked = true" :disabled="Clicked">
+                            Create report
+                        </b-button>
                     </b-form>
                 </b-col>
+                <b-modal ref="myModalRef" centered id="modalPrevent"
+                         title="Confirmation alert"
+                         @ok="ProccessModal" @cancel="Clicked = false">
+                    Are you sure you want to request this report ?
+                </b-modal>
             </b-row>
         </b-container>
     </div>
@@ -91,8 +98,8 @@
             }
         },
         methods: {
-            onSubmit (evt) {
-                evt.preventDefault();
+            ProccessModal(){
+                this.$refs.myModalRef.hide();
                 let that = this;
                 that.submited = false;
                 axios.post('/set/report', this.form)
@@ -107,6 +114,11 @@
                         that.errors = error.response.data.errors;
                         console.log(error.response.data.message);
                     });
+            },
+            onSubmit (evt) {
+                evt.preventDefault();
+                this.$refs.myModalRef.show();
+
             }
         }
     }
