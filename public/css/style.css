@@ -1,0 +1,16 @@
+body{
+    background: #fff !important;
+}
+.c1{
+    border-radius: 0 !important;
+    color:#212529;
+}
+.margin-top{
+    margin-top:20px;
+}
+.mp{
+    margin: 10px 0;
+}
+.footerbom{
+    background: #ccc;
+}
