@@ -28,6 +28,6 @@ First after installing the project you have to open the following links :-
 `php artisan queue:work`  
   
 More information about project :  
-- **Backend ( PHP with [laravel framework](https://laravel.com/) )**  
-- **Frontend (Vuejs and bootstrap using [Bootstrap-Vue](https://bootstrap-vue.js.org/)**  
+- **Backend ( PHP with [Laravel framework](https://laravel.com/) )**  
+- **Frontend ( Vuejs and bootstrap using [Bootstrap-Vue](https://bootstrap-vue.js.org/) )**  
 - **API from awesome [CodeForces](http://codeforces.com/)**
